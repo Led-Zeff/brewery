@@ -2,10 +2,13 @@ package courses.microservices.brewery.services.v2.impl;
 
 import java.util.UUID;
 
+import org.springframework.stereotype.Service;
+
 import courses.microservices.brewery.model.v2.BeerDtoV2;
 import courses.microservices.brewery.model.v2.BeerStyle;
 import courses.microservices.brewery.services.v2.BeerServiceV2;
 
+@Service
 public class BeerServiceImplV2 implements BeerServiceV2 {
 
   @Override
