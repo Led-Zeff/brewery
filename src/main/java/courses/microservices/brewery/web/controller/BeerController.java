@@ -2,6 +2,8 @@ package courses.microservices.brewery.web.controller;
 
 import java.util.UUID;
 
+import javax.validation.Valid;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,7 +41,7 @@ public class BeerController {
   }
 
   @PostMapping
-  public ResponseEntity<Void> createBeeer(@RequestBody BeerDto beer) {
+  public ResponseEntity<Void> createBeeer(@Valid @RequestBody BeerDto beer) {
     var saved = beerService.save(beer);
 
     var headers = new HttpHeaders();
@@ -50,7 +52,7 @@ public class BeerController {
   
   @PutMapping("/{id}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
-  public void updateBeer(@RequestBody BeerDto beer, @PathVariable UUID id) {
+  public void updateBeer(@Valid @RequestBody BeerDto beer, @PathVariable UUID id) {
     beerService.save(beer);
   }
 
