@@ -81,9 +81,9 @@
             </path>
           </annotationProcessorPaths>
 
-          <comilerArgs>
-            <comilerArg>-Amapstruct.defaultComponentModel=spring</comilerArg>
-          </comilerArgs>
+          <compilerArgs>
+            <compilerArg>-Amapstruct.defaultComponentModel=spring</compilerArg>
+          </compilerArgs>
         </configuration>
       </plugin>
     </plugins>
